@@ -76,7 +76,7 @@ span::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url("image/uncheckk.png");
+    background-image: url("uncheckk.png");
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -88,7 +88,7 @@ span.checked{
     color: #888;
 }
 span.checked::before{
-    background-image: url("image/checked.png");
+    background-image: url("checked.png");
 }
 ul li button{
     background-color: transparent;
