@@ -1,0 +1,105 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+.main{
+    width:100%;
+    min-height:100vh;
+    background:linear-gradient(135deg, #1af,#92a);
+    padding: 10px;
+}
+.to-do_outer{
+     /* height:auto; */
+     width: 100%;
+     max-width: 540px;
+     background-color: #faa;
+     border: 2px solid pink;
+     margin: 100px auto 20px;
+     padding: 40px 30px 70px;
+     border-radius: 20px;
+}
+.to-do_outer h2 {
+    color:#001234;
+    display: flex;
+    margin-bottom: 20px;
+}
+.to-do_outer h2 img{
+    width:25px;
+    margin-left:5px ;
+}
+.input_outer{
+    width: 100%;
+    /* border: 2px solid pink;   */
+    display: flex;
+    justify-content: center;
+}
+.input_outer input{
+  height: 40px;
+  width: 200px;
+  max-width: 100%;
+  border-radius: 20px;
+  padding-left:5px ;
+  font-size: 1rem;
+  border: 1px solid;
+  outline: none;
+  box-shadow:  2px 4px 10px rgba(0,0,0,0.5) ,inset -3px -2px 10px rgba(0,0,0,0.5);
+
+}
+.input_outer input::placeholder{
+    color:#ccc;
+}
+.input_outer button{
+  width: 70px;
+  margin-left: 10px;
+  border:none ;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  box-shadow:  2px 4px 20px rgba(0,0,0,0.5) ,inset -3px -2px 10px rgba(0,0,0,0.5);
+  background-color: #97f;
+  color: #000 ;
+  cursor: pointer;
+  font-weight: bold;
+}
+span{
+ list-style: none;
+ font-size: 17px;
+ padding: 12px 8px 12px 50px;
+ cursor: pointer;
+ position: relative;
+
+}
+span::before{
+    content: " ";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("image/uncheckk.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left:8px;
+
+}
+span.checked{
+    text-decoration: line-through;
+    color: #888;
+}
+span.checked::before{
+    background-image: url("image/checked.png");
+}
+ul li button{
+    background-color: transparent;
+    border:none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 30px;
+    width:30px;
+    border-radius: 50%;
+}
+ul li button:hover{
+    background-color: #edaaf0;
+}
