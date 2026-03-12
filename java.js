@@ -19,7 +19,7 @@ const Do_work = ()=>{
          if(e.target.tagName==="BUTTON"){
            e.target.parentElement.remove();
            save_data();
-         }else if(event.target.tagName==="SPAN" || event.target.tagName==="LI"){
+         }else if(e.target.tagName==="SPAN" || e.target.tagName==="LI"){
           const target = e.target.tagName === "LI" ? e.target.querySelector("span") : e.target;
            target.classList.toggle(`checked`);
            save_data();
@@ -47,4 +47,5 @@ const Do_work = ()=>{
   let show_data=()=>{
     work_list.innerHTML= localStorage.getItem("data");
   }
+
   show_data();
