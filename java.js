@@ -15,25 +15,33 @@ const Do_work = ()=>{
     new_li.style.justifyContent="space-between";
     input_text.value="";
     save_data();
-    work_list.addEventListener("click",(e)=>{
-         if(e.target.tagName==="BUTTON"){
-           e.target.parentElement.remove();
-           save_data();
-         }else if(e.target.tagName==="SPAN" || e.target.tagName==="LI"){
-          const target = e.target.tagName === "LI" ? e.target.querySelector("span") : e.target;
-           target.classList.toggle(`checked`);
-           save_data();
-         }
-       });
  };
- add_work.addEventListener("click",()=>{
-   if(input_text.value.trim()===""){
-      alert("please Enter work");
-    }else{
-      Do_work();
-      save_data();
-    }   
- });
+ work_list.addEventListener("click",(e)=>{
+  if(e.target.tagName==="BUTTON"){
+    e.target.parentElement.remove();
+    save_data();
+  }else if(e.target.tagName==="SPAN" || e.target.tagName==="LI"){
+   const target = e.target.tagName === "LI" ? e.target.querySelector("span") : e.target;
+    target.classList.toggle(`checked`);
+    save_data();
+  }
+});
+//  add_work.addEventListener("click",()=>{
+//    if(input_text.value.trim()===""){
+//       alert("please Enter work");
+//     }else{
+//       Do_work();
+//       save_data();
+//     }   
+//  });
+   function work (){
+      if(input_text.value.trim()===""){
+            alert("please Enter work");
+          }else{
+            Do_work();
+            save_data();
+          } 
+   }
  input_text.addEventListener("keypress", (e) => {
    if (e.key === "Enter") {
        add_work.click();
@@ -47,5 +55,4 @@ const Do_work = ()=>{
   let show_data=()=>{
     work_list.innerHTML= localStorage.getItem("data");
   }
-
   show_data();
